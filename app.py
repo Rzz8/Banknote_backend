@@ -16,11 +16,11 @@ class BankNote(BaseModel):
 # 2. Create the app object
 app = FastAPI()
 
-origins = ['https://banknote-prediction.herokuapp.com/']
+origins = ['*']
 
 app.add_middleware(CORSMiddleware,
                    allow_origins=origins,
-                   allow_credentials=True,
+                   allow_credentials=False,
                    allow_methods=["*"],
                    allow_headers=["*"])
 
